@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C5FB606-E698-46B5-85F0-D7CBC32CBC60}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreNLPPOSTagger</RootNamespace>
+    <AssemblyName>POS_POSTagger_CoreNLP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ejml-0.23, Version=0.23.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\ejml-0.23.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.AWT.WinForms, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.AWT.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Beans, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Beans.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Charsets, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Charsets.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Cldrdata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Cldrdata.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Corba, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Corba.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Core, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Jdbc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Jdbc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Localedata, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Localedata.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Management, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Media, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Misc, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Misc.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Naming, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Nashorn, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Nashorn.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Remoting, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Remoting.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Security, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.SwingAWT, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.SwingAWT.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Text, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.API, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.API.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Bind, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Bind.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Crypto, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Parse, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Parse.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.Transform, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.Transform.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.WebServices, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.XML.XPath, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.OpenJDK.XML.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.Runtime.JNI, Version=8.1.5717.0, Culture=neutral, PublicKeyToken=13235d27fcbfff58, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\IKVM.8.1.5717.0\lib\IKVM.Runtime.JNI.dll</HintPath>
+    </Reference>
+    <Reference Include="javax.json, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\javax.json.dll</HintPath>
+    </Reference>
+    <Reference Include="joda-time, Version=2.9.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\joda-time.dll</HintPath>
+    </Reference>
+    <Reference Include="jollyday, Version=0.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\jollyday.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf, Version=2.6.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="slf4j-api, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\slf4j-api.dll</HintPath>
+    </Reference>
+    <Reference Include="slf4j-simple, Version=1.7.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\slf4j-simple.dll</HintPath>
+    </Reference>
+    <Reference Include="stanford-corenlp-3.9.1, Version=3.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\stanford-corenlp-3.9.1.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xom, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stanford.NLP.CoreNLP.3.9.1.0\lib\xom.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoreNLP_POSTagger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm_CoreNLPNET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm_CoreNLPNET.Designer.cs">
+      <DependentUpon>SettingsForm_CoreNLPNET.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries - Helpers\OutputPluginHelperObject\OutputPluginHelperLib.csproj">
+      <Project>{0c767a38-ec69-4687-879a-dccd77cbaafb}</Project>
+      <Name>OutputPluginHelperLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries - Helpers\PluginContracts\PluginContracts.csproj">
+      <Project>{a786b34a-f929-47a2-a92d-4f2f474c9aa0}</Project>
+      <Name>PluginContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="_Helper Plugins\TaggerOutputObjectLibrary\TaggerOutputObjectLibrary.csproj">
+      <Project>{b00a9984-dd15-4304-803b-6a3f89c52736}</Project>
+      <Name>TaggerOutputObjectLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm_CoreNLPNET.resx">
+      <DependentUpon>SettingsForm_CoreNLPNET.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.ico" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y  "$(TargetPath)" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\"
+xcopy /y  "$(TargetDir)ejml-0.23.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.AWT.WinForms.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Beans.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Charsets.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Cldrdata.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Corba.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Core.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Jdbc.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Localedata.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Management.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Media.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Misc.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Naming.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Nashorn.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Remoting.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Security.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.SwingAWT.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Text.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Tools.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.Util.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.XML.API.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.XML.Bind.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.XML.Crypto.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.XML.Parse.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.XML.Transform.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.XML.WebServices.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.OpenJDK.XML.XPath.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.Runtime.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)IKVM.Runtime.JNI.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)javax.json.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)joda-time.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)jollyday.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)protobuf.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)slf4j-api.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)slf4j-simple.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)stanford-corenlp-3.9.1.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)ThreadsafeOutputWriter.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y  "$(TargetDir)xom.dll" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\IKVM_8_1_5717\"
+xcopy /y /e "$(ProjectDir)stanford-postagger-full-2018-02-27" "$(SolutionDir)BUTTER_Client\$(OutDir)\Plugins\Dependencies\stanford-postagger-full-2018-02-27\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
